@@ -3,9 +3,8 @@ package com.ivyapps.material3showcase.component.button
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -18,19 +17,19 @@ import com.ivyapps.material3showcase.component.showkaseWidth
 @ComponentPreview
 @ShowkaseComposable(
     name = "Default",
-    group = "Elevated Button",
+    group = "Text Button",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
 )
 @Composable
-fun ElevatedButtonDefault() {
+fun TextButtonDefault() {
     ShowcasePreview {
-        ElevatedButton(
+        TextButton(
             onClick = {
                 /* Do something! */
             }
         ) {
-            Text(text = "Text")
+            Text("Text")
         }
     }
 }
@@ -38,30 +37,24 @@ fun ElevatedButtonDefault() {
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
-    group = "Elevated Button",
+    group = "Text Button",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
 )
 @Composable
-fun ElevatedButtonCustom() {
+fun TextButtonCustom() {
     ShowcasePreview {
-        ElevatedButton(
+        TextButton(
             onClick = {
                 /* Do something! */
             },
             modifier = Modifier,
             enabled = true,
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.elevatedButtonColors(
-                containerColor = MaterialTheme.colorScheme.secondaryContainer,
-                contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
-                disabledContainerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                disabledContentColor = MaterialTheme.colorScheme.onTertiaryContainer
-            ),
-            elevation = ButtonDefaults.elevatedButtonElevation(),
+            colors = ButtonDefaults.textButtonColors(),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
         ) {
-            Text(text = "Text")
+            Text("Text")
         }
     }
 }

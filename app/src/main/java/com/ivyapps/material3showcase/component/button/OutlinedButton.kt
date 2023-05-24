@@ -1,10 +1,11 @@
 package com.ivyapps.material3showcase.component.button
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,19 +19,19 @@ import com.ivyapps.material3showcase.component.showkaseWidth
 @ComponentPreview
 @ShowkaseComposable(
     name = "Default",
-    group = "Elevated Button",
+    group = "Outlined Button",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
 )
 @Composable
-fun ElevatedButtonDefault() {
+fun OutlinedButtonDefault() {
     ShowcasePreview {
-        ElevatedButton(
+        OutlinedButton(
             onClick = {
                 /* Do something! */
             }
         ) {
-            Text(text = "Text")
+            Text("Text")
         }
     }
 }
@@ -38,30 +39,30 @@ fun ElevatedButtonDefault() {
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
-    group = "Elevated Button",
+    group = "Outlined Button",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
 )
 @Composable
-fun ElevatedButtonCustom() {
+fun OutlinedButtonCustom() {
     ShowcasePreview {
-        ElevatedButton(
+        OutlinedButton(
             onClick = {
                 /* Do something! */
             },
             modifier = Modifier,
             enabled = true,
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.elevatedButtonColors(
+            colors = ButtonDefaults.outlinedButtonColors(
                 containerColor = MaterialTheme.colorScheme.secondaryContainer,
                 contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
                 disabledContainerColor = MaterialTheme.colorScheme.tertiaryContainer,
                 disabledContentColor = MaterialTheme.colorScheme.onTertiaryContainer
             ),
-            elevation = ButtonDefaults.elevatedButtonElevation(),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
         ) {
-            Text(text = "Text")
+            Text("Text")
         }
     }
 }
