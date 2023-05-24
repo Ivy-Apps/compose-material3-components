@@ -56,7 +56,7 @@ fun SmallFloatingActionButtonCustom() {
             shape = FloatingActionButtonDefaults.smallShape,
             containerColor = FloatingActionButtonDefaults.containerColor,
             contentColor = contentColorFor(FloatingActionButtonDefaults.containerColor),
-            elevation = FloatingActionButtonDefaults.elevation(5.dp)
+            elevation = FloatingActionButtonDefaults.elevation(4.dp)
         ) {
             Icon(
                 imageVector = Icons.Filled.Add,

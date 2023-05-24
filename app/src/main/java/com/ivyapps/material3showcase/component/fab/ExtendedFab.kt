@@ -1,10 +1,13 @@
 package com.ivyapps.material3showcase.component.fab
 
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Create
-import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
 import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -12,28 +15,31 @@ import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.ivyapps.material3showcase.component.ComponentPreview
 import com.ivyapps.material3showcase.component.ShowcasePreview
-import com.ivyapps.material3showcase.component.showkaseHeight
-import com.ivyapps.material3showcase.component.showkaseWidth
 
 @ComponentPreview
 @ShowkaseComposable(
     name = "Default",
-    group = "Floating Action Button",
-    widthDp = showkaseWidth,
-    heightDp = showkaseHeight,
+    group = "Extended Floating Action Button",
+    widthDp = 312,
+    heightDp = 72,
 )
 @Composable
-fun FloatingActionButtonDefault() {
-    ShowcasePreview {
-        FloatingActionButton(
+fun ExtendedFloatingActionButtonDefault() {
+    ShowcasePreview(
+        width = 312,
+        height = 72,
+    ) {
+        ExtendedFloatingActionButton(
             onClick = {
-                /* Do something! */
-            }
-        ) {
+                /* do something */
+            })
+        {
             Icon(
                 imageVector = Icons.Default.Create,
-                contentDescription = "Create"
+                contentDescription = "Create",
             )
+            Spacer(modifier = Modifier.width(12.dp))
+            Text(text = "Compose")
         }
     }
 }
@@ -41,27 +47,32 @@ fun FloatingActionButtonDefault() {
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
-    group = "Floating Action Button",
-    widthDp = showkaseWidth,
-    heightDp = showkaseHeight,
+    group = "Extended Floating Action Button",
+    widthDp = 312,
+    heightDp = 72,
 )
 @Composable
-fun FloatingActionButtonCustom() {
-    ShowcasePreview {
-        FloatingActionButton(
+fun ExtendedFloatingActionButtonCustom() {
+    ShowcasePreview(
+        width = 312,
+        height = 72,
+    ) {
+        ExtendedFloatingActionButton(
             onClick = {
-                /* Do something! */
+                /* do something */
             },
             modifier = Modifier,
-            shape = FloatingActionButtonDefaults.shape,
+            shape = FloatingActionButtonDefaults.extendedFabShape,
             containerColor = FloatingActionButtonDefaults.containerColor,
             contentColor = contentColorFor(FloatingActionButtonDefaults.containerColor),
             elevation = FloatingActionButtonDefaults.elevation(4.dp)
         ) {
             Icon(
                 imageVector = Icons.Default.Create,
-                contentDescription = "Create"
+                contentDescription = "Create",
             )
+            Spacer(modifier = Modifier.width(12.dp))
+            Text(text = "Compose")
         }
     }
 }
