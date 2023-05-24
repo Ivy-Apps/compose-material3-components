@@ -10,6 +10,7 @@ activity-compose = "1.7.0"
 compose-bom = "2023.03.00"
 material3 = "1.1.0"
 ksp = "1.8.10-1.0.9"
+showkase = "1.0.0-beta18"
 
 [libraries]
 androidx-material3-windowSizeClass = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "material3" }
@@ -28,6 +29,8 @@ ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
+showkase = { module = "com.airbnb.android:showkase", version.ref = "showkase"}
+showkase-processor = { module = "com.airbnb.android:showkase-processor", version.ref = "showkase"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
