@@ -25,7 +25,7 @@ fun ElevatedButtonDefault() {
     ShowcasePreview {
         ElevatedButton(
             onClick = {
-                /*TODO*/
+                /*TODO: Handle click*/
             }
         ) {
             Text(text = "Text")
@@ -45,7 +45,7 @@ fun ElevatedButtonCustom() {
     ShowcasePreview {
         ElevatedButton(
             onClick = {
-                /*TODO*/
+                /*TODO: Handle click*/
             },
             enabled = true,
             shape = RoundedCornerShape(12.dp),
