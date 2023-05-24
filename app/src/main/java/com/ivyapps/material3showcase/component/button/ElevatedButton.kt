@@ -10,9 +10,16 @@ import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.ivyapps.material3showcase.component.ComponentPreview
 import com.ivyapps.material3showcase.component.ShowcasePreview
+import com.ivyapps.material3showcase.component.showkaseHeight
+import com.ivyapps.material3showcase.component.showkaseWidth
 
 @ComponentPreview
-@ShowkaseComposable(name = "Default", group = "Elevated Button")
+@ShowkaseComposable(
+    name = "Default",
+    group = "Elevated Button",
+    widthDp = showkaseWidth,
+    heightDp = showkaseHeight,
+)
 @Composable
 fun ElevatedButtonDefault() {
     ShowcasePreview {
@@ -27,7 +34,12 @@ fun ElevatedButtonDefault() {
 }
 
 @ComponentPreview
-@ShowkaseComposable(name = "Custom", group = "Elevated Button")
+@ShowkaseComposable(
+    name = "Custom",
+    group = "Elevated Button",
+    widthDp = showkaseWidth,
+    heightDp = showkaseHeight,
+)
 @Composable
 fun ElevatedButtonCustom() {
     ShowcasePreview {
