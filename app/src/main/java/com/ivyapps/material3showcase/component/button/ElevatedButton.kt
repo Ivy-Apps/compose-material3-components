@@ -4,17 +4,15 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.ivyapps.material3showcase.component.ComponentPreview
 import com.ivyapps.material3showcase.component.ShowcasePreview
 
 @ComponentPreview
-@ShowkaseComposable
+@ShowkaseComposable(name = "Default", group = "Elevated Button")
 @Composable
 fun ElevatedButtonDefault() {
     ShowcasePreview {
@@ -29,7 +27,7 @@ fun ElevatedButtonDefault() {
 }
 
 @ComponentPreview
-@ShowkaseComposable
+@ShowkaseComposable(name = "Custom", group = "Elevated Button")
 @Composable
 fun ElevatedButtonCustom() {
     ShowcasePreview {
