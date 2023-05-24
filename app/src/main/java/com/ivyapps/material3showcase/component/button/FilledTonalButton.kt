@@ -2,8 +2,8 @@ package com.ivyapps.material3showcase.component.button
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,14 +18,14 @@ import com.ivyapps.material3showcase.component.showkaseWidth
 @ComponentPreview
 @ShowkaseComposable(
     name = "Default",
-    group = "Filled Button",
+    group = "Filled Tonal Button",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
 )
 @Composable
-fun FilledButtonDefault() {
+fun FilledTonalButtonDefault() {
     ShowcasePreview {
-        Button(
+        FilledTonalButton(
             onClick = {
                 /* Do something! */
             }
@@ -38,25 +38,25 @@ fun FilledButtonDefault() {
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
-    group = "Filled Button",
+    group = "Filled Tonal Button",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
 )
 @Composable
-fun FilledButtonCustom() {
+fun FilledTonalButtonCustom() {
     ShowcasePreview {
-        Button(
+        FilledTonalButton(
             onClick = {
                 /* Do something! */
             },
             modifier = Modifier,
             enabled = true,
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.primary,
-                contentColor = MaterialTheme.colorScheme.onPrimary,
-                disabledContainerColor = MaterialTheme.colorScheme.secondaryContainer,
-                disabledContentColor = MaterialTheme.colorScheme.onSecondaryContainer
+            colors = ButtonDefaults.filledTonalButtonColors(
+                containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+                disabledContainerColor = MaterialTheme.colorScheme.tertiaryContainer,
+                disabledContentColor = MaterialTheme.colorScheme.onTertiaryContainer
             ),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
         ) {

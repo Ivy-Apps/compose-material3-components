@@ -59,7 +59,7 @@ fun ElevatedButtonCustom() {
                 disabledContentColor = MaterialTheme.colorScheme.onTertiaryContainer
             ),
             elevation = ButtonDefaults.elevatedButtonElevation(),
-            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
         ) {
             Text(text = "Text")
         }
