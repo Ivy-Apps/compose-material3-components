@@ -1,10 +1,10 @@
 package com.ivyapps.material3showcase.component.fab
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Create
-import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,21 +18,21 @@ import com.ivyapps.material3showcase.component.showkaseWidth
 @ComponentPreview
 @ShowkaseComposable(
     name = "Default",
-    group = "Floating Action Button",
+    group = "Small Floating Action Button",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
 )
 @Composable
-fun FloatingActionButtonDefault() {
+fun SmallFloatingActionButtonDefault() {
     ShowcasePreview {
-        FloatingActionButton(
+        SmallFloatingActionButton(
             onClick = {
-                /* Do something! */
-            }
+                /* do something */
+            },
         ) {
             Icon(
-                imageVector = Icons.Default.Create,
-                contentDescription = "Create"
+                imageVector = Icons.Filled.Add,
+                contentDescription = "Add"
             )
         }
     }
@@ -41,26 +41,26 @@ fun FloatingActionButtonDefault() {
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
-    group = "Floating Action Button",
+    group = "Small Floating Action Button",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
 )
 @Composable
-fun FloatingActionButtonCustom() {
+fun SmallFloatingActionButtonCustom() {
     ShowcasePreview {
-        FloatingActionButton(
+        SmallFloatingActionButton(
             onClick = {
-                /* Do something! */
+                /* do something */
             },
             modifier = Modifier,
-            shape = FloatingActionButtonDefaults.shape,
+            shape = FloatingActionButtonDefaults.smallShape,
             containerColor = FloatingActionButtonDefaults.containerColor,
             contentColor = contentColorFor(FloatingActionButtonDefaults.containerColor),
             elevation = FloatingActionButtonDefaults.elevation(5.dp)
         ) {
             Icon(
-                imageVector = Icons.Default.Create,
-                contentDescription = "Create"
+                imageVector = Icons.Filled.Add,
+                contentDescription = "Add"
             )
         }
     }
