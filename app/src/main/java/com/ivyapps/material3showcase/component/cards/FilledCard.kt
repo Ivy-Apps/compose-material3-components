@@ -1,5 +1,8 @@
 package com.ivyapps.material3showcase.component.cards
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -14,8 +17,8 @@ import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.ivyapps.material3showcase.component.ComponentPreview
 import com.ivyapps.material3showcase.component.ShowcasePreview
 
-private const val width = 420
-private const val height = 220
+private const val width = 520
+private const val height = 170
 
 @ComponentPreview
 @ShowkaseComposable(
@@ -28,25 +31,28 @@ private const val height = 220
 fun FilledCardDefault() {
     ShowcasePreview(width = width, height = height) {
         Card {
-            Text(
-                modifier = Modifier.padding(8.dp),
-                text = "Title",
-                style = MaterialTheme.typography.headlineMedium
-            )
-
-            Text(
-                modifier = Modifier.padding(8.dp),
-                text = "From your recent favorites",
-                style = MaterialTheme.typography.bodySmall
-            )
-
-            Button(
-                modifier = Modifier.padding(8.dp),
-                onClick = {
-                    /* Do something! */
-                }
+            Column(
+                modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
-                Text("Buy")
+                Text(
+                    text = "Title",
+                    style = MaterialTheme.typography.headlineMedium
+                )
+
+                Text(
+                    text = "From your recent ones",
+                    style = MaterialTheme.typography.bodySmall
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                Button(
+                    onClick = {
+                        /* Do something! */
+                    }
+                ) {
+                    Text("Buy")
+                }
             }
         }
     }
@@ -72,25 +78,28 @@ fun FilledCardCustom() {
                 disabledContentColor = MaterialTheme.colorScheme.onTertiaryContainer
             )
         ) {
-            Text(
-                modifier = Modifier.padding(8.dp),
-                text = "Title",
-                style = MaterialTheme.typography.headlineMedium
-            )
-
-            Text(
-                modifier = Modifier.padding(8.dp),
-                text = "From your recent favorites",
-                style = MaterialTheme.typography.bodySmall
-            )
-
-            Button(
-                modifier = Modifier.padding(8.dp),
-                onClick = {
-                    /* Do something! */
-                }
+            Column(
+                modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
             ) {
-                Text("Buy")
+                Text(
+                    text = "Title",
+                    style = MaterialTheme.typography.headlineMedium
+                )
+
+                Text(
+                    text = "From your recent ones",
+                    style = MaterialTheme.typography.bodySmall
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                Button(
+                    onClick = {
+                        /* Do something! */
+                    }
+                ) {
+                    Text("Buy")
+                }
             }
         }
     }
