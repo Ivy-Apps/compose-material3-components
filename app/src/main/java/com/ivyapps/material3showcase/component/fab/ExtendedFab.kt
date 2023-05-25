@@ -32,8 +32,8 @@ fun ExtendedFloatingActionButtonDefault() {
         ExtendedFloatingActionButton(
             onClick = {
                 /* do something */
-            })
-        {
+            }
+        ) {
             Icon(
                 imageVector = Icons.Default.Create,
                 contentDescription = "Create",
