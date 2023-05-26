@@ -3,7 +3,7 @@ package com.ivyapps.material3showcase.component.chips
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Call
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Icon
@@ -33,12 +33,12 @@ fun AssistChipDefault() {
                 /* Do something! */
             },
             label = {
-                Text("Text")
+                Text("Call")
             },
             leadingIcon = {
                 Icon(
-                    Icons.Filled.Settings,
-                    contentDescription = "Settings",
+                    Icons.Filled.Call,
+                    contentDescription = "Call",
                     Modifier.size(AssistChipDefaults.IconSize)
                 )
             }
@@ -62,12 +62,12 @@ fun AssistChipCustom() {
                 /* Do something! */
             },
             label = {
-                Text("Text")
+                Text("Call")
             },
             leadingIcon = {
                 Icon(
-                    Icons.Filled.Settings,
-                    contentDescription = "Settings",
+                    Icons.Filled.Call,
+                    contentDescription = "Call",
                     Modifier.size(AssistChipDefaults.IconSize)
                 )
             },
