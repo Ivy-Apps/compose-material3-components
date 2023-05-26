@@ -1,14 +1,12 @@
 package com.ivyapps.material3showcase.component.badges
 
-import androidx.compose.material3.Button
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -51,7 +49,7 @@ fun BadgeDemo() {
 @OptIn(ExperimentalMaterial3Api::class)
 @ComponentPreview
 @ShowkaseComposable(
-    name = "Default",
+    name = "Custom",
     group = "Badge",
     widthDp = showkaseWidth,
     heightDp = showkaseHeight,
