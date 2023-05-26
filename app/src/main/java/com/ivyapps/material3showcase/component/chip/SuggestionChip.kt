@@ -1,4 +1,4 @@
-package com.ivyapps.material3showcase.component.chips
+package com.ivyapps.material3showcase.component.chip
 
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.Text

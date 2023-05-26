@@ -1,4 +1,4 @@
-package com.ivyapps.material3showcase.component.chips
+package com.ivyapps.material3showcase.component.chip
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
