@@ -49,7 +49,7 @@ fun TriStateCheckboxCustom() {
         Column {
             // define dependent checkboxes states
             val (state, onStateChange) = remember { mutableStateOf(true) }
-            val (state2, onStateChange2) = remember { mutableStateOf(true) }
+            val (state2, onStateChange2) = remember { mutableStateOf(false) }
 
             // TriStateCheckbox state reflects state of dependent checkboxes
             val parentState = remember(state, state2) {

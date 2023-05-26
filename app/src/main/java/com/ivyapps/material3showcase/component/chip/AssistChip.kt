@@ -66,7 +66,7 @@ fun AssistChipCustom() {
             },
             leadingIcon = {
                 Icon(
-                    Icons.Filled.Call,
+                    imageVector = Icons.Filled.Call,
                     contentDescription = "Call",
                     Modifier.size(AssistChipDefaults.IconSize)
                 )

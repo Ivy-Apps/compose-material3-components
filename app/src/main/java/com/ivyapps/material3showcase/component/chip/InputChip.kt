@@ -55,9 +55,9 @@ fun InputChipDefault() {
                 label = { Text("Person") },
                 avatar = {
                     Icon(
-                        Icons.Filled.Person,
-                        contentDescription = "Person",
-                        Modifier.size(InputChipDefaults.AvatarSize)
+                        modifier = Modifier.size(InputChipDefaults.AvatarSize),
+                        imageVector = Icons.Filled.Person,
+                        contentDescription = "Person"
                     )
                 }
             )
@@ -85,9 +85,9 @@ fun InputChipCustom() {
             label = { Text("Input") },
             avatar = {
                 Icon(
-                    Icons.Filled.Person,
-                    contentDescription = "Person",
-                    Modifier.size(InputChipDefaults.AvatarSize)
+                    modifier = Modifier.size(InputChipDefaults.AvatarSize),
+                    imageVector = Icons.Filled.Person,
+                    contentDescription = "Person"
                 )
             },
             enabled = true,
