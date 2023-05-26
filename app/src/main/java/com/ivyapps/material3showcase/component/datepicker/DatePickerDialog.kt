@@ -77,17 +77,18 @@ fun DatePickerDialogDefault() {
     }
 }
 
+@SuppressLint("UnrememberedMutableState")
 @OptIn(ExperimentalMaterial3Api::class)
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
     group = "Date Picker Dialog",
-    widthDp = 1120,
-    heightDp = 720,
+    widthDp = 1200,
+    heightDp = 2000,
 )
 @Composable
 fun DatePickerDialogCustom() {
-    ShowcasePreview(1120, 720, hideDarkMode = true) {
+    ShowcasePreview(1200, 2000, hideDarkMode = true) {
         val snackState = remember { SnackbarHostState() }
         val snackScope = rememberCoroutineScope()
 

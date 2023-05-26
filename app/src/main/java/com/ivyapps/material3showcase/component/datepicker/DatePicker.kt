@@ -42,12 +42,12 @@ fun DatePickerDefault() {
 @ShowkaseComposable(
     name = "Custom",
     group = "Date Picker",
-    widthDp = 1120,
-    heightDp = 720,
+    widthDp = 1200,
+    heightDp = 2000
 )
 @Composable
 fun DatePickerCustom() {
-    ShowcasePreview(1120, 720, hideDarkMode = true) {
+    ShowcasePreview(1200, 2000, hideDarkMode = true) {
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
             val datePickerState = rememberDatePickerState(initialSelectedDateMillis = 1685112333816)
 
