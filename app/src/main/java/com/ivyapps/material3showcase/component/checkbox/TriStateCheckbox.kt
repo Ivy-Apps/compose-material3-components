@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TriStateCheckbox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -50,7 +49,7 @@ fun TriStateCheckboxCustom() {
         Column {
             // define dependent checkboxes states
             val (state, onStateChange) = remember { mutableStateOf(true) }
-            val (state2, onStateChange2) = remember { mutableStateOf(true) }
+            val (state2, onStateChange2) = remember { mutableStateOf(false) }
 
             // TriStateCheckbox state reflects state of dependent checkboxes
             val parentState = remember(state, state2) {
@@ -75,14 +74,7 @@ fun TriStateCheckboxCustom() {
                 state = parentState,
                 onClick = onParentClick,
                 enabled = true,
-                colors = CheckboxDefaults.colors(
-                    checkedColor = MaterialTheme.colorScheme.secondary,
-                    uncheckedColor = MaterialTheme.colorScheme.secondaryContainer,
-                    checkmarkColor = MaterialTheme.colorScheme.tertiaryContainer,
-                    disabledCheckedColor = MaterialTheme.colorScheme.secondary,
-                    disabledUncheckedColor = MaterialTheme.colorScheme.secondaryContainer,
-                    disabledIndeterminateColor = MaterialTheme.colorScheme.onTertiaryContainer
-                )
+                colors = CheckboxDefaults.colors()
             )
 
             Spacer(Modifier.size(25.dp))
