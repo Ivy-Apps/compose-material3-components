@@ -2,7 +2,7 @@ package com.ivyapps.material3showcase.component.slider
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Slider
+import androidx.compose.material3.RangeSlider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,22 +20,26 @@ import com.ivyapps.material3showcase.component.ShowcasePreview
 @ComponentPreview
 @ShowkaseComposable(
     name = "Default",
-    group = "Slider",
+    group = "Range Slider",
     widthDp = 2000,
     heightDp = 2000
 )
 @Composable
-fun SliderDefault() {
+fun RangeSliderDefault() {
     ShowcasePreview(2000, 2000, hideDarkMode = true) {
-        var sliderPosition by remember { mutableStateOf(0f) }
+        var sliderPosition by remember { mutableStateOf(0f..100f) }
 
         Column {
             Text(text = sliderPosition.toString())
 
-            Slider(
+            RangeSlider(
                 modifier = Modifier.semantics { contentDescription = "" },
+                steps = 5,
                 value = sliderPosition,
-                onValueChange = { sliderPosition = it })
+                onValueChange = { sliderPosition = it },
+                valueRange = 0f..100f,
+                onValueChangeFinished = {}
+            )
         }
     }
 }
@@ -43,24 +47,26 @@ fun SliderDefault() {
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
-    group = "Slider",
+    group = "Range Slider",
     widthDp = 1200,
     heightDp = 2000
 )
 @Composable
-fun SliderCustom() {
+fun RangeSliderCustom() {
     ShowcasePreview(1200, 2000, hideDarkMode = true) {
-        var sliderPosition by remember { mutableStateOf(0f) }
+        var sliderPosition by remember { mutableStateOf(0f..100f) }
 
         Column {
             Text(text = sliderPosition.toString())
 
-            Slider(
+            RangeSlider(
                 modifier = Modifier.semantics { contentDescription = "" },
+                steps = 5,
                 value = sliderPosition,
                 onValueChange = { sliderPosition = it },
+                valueRange = 0f..100f,
+                onValueChangeFinished = {},
                 enabled = true,
-                steps = 5,
                 colors = SliderDefaults.colors(
                     thumbColor = MaterialTheme.colorScheme.primary,
                     activeTrackColor = MaterialTheme.colorScheme.primary,
