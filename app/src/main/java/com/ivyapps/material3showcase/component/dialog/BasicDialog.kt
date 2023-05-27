@@ -32,7 +32,7 @@ fun BasicDialogDefault() {
         if (openDialog.value) {
             AlertDialog(
                 onDismissRequest = { openDialog.value = false },
-                icon = { Icon(Icons.Filled.Info, contentDescription = "Info") },
+                icon = { Icon(imageVector = Icons.Filled.Info, contentDescription = "Info") },
                 title = {
                     Text(text = "Title")
                 },
@@ -81,7 +81,7 @@ fun BasicDialogCustom() {
             AlertDialog(
                 modifier = Modifier,
                 onDismissRequest = { openDialog.value = false },
-                icon = { Icon(Icons.Filled.Info, contentDescription = "Info") },
+                icon = { Icon(imageVector = Icons.Filled.Info, contentDescription = "Info") },
                 title = {
                     Text(text = "Title")
                 },
