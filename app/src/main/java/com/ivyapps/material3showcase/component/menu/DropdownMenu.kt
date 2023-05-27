@@ -47,7 +47,10 @@ fun DropdownMenuDefault() {
                 .wrapContentSize(Alignment.TopStart)
         ) {
             IconButton(onClick = { expanded = true }) {
-                Icon(imageVector = Icons.Default.MoreVert, contentDescription = "More menu")
+                Icon(
+                    imageVector = Icons.Default.MoreVert,
+                    contentDescription = "More menu"
+                )
             }
 
             DropdownMenu(
@@ -61,7 +64,7 @@ fun DropdownMenuDefault() {
                     },
                     leadingIcon = {
                         Icon(
-                            Icons.Outlined.Edit,
+                            imageVector = Icons.Outlined.Edit,
                             contentDescription = "Edit"
                         )
                     })
@@ -122,7 +125,10 @@ fun DropdownMenuCustom() {
                     disabledContentColor = MaterialTheme.colorScheme.onBackground
                 )
             ) {
-                Icon(imageVector = Icons.Default.MoreVert, contentDescription = "More menu")
+                Icon(
+                    imageVector = Icons.Default.MoreVert,
+                    contentDescription = "More menu"
+                )
             }
 
             DropdownMenu(
