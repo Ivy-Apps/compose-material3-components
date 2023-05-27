@@ -19,7 +19,7 @@ import com.ivyapps.material3showcase.component.ShowcasePreview
 @ComponentPreview
 @ShowkaseComposable(
     name = "Default",
-    group = "Date Picker",
+    group = "Date Picker (Calendar)",
     widthDp = 1200,
     heightDp = 2000
 )
@@ -41,7 +41,7 @@ fun DatePickerDefault() {
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
-    group = "Date Picker",
+    group = "Date Picker (Calendar)",
     widthDp = 1200,
     heightDp = 2000
 )
