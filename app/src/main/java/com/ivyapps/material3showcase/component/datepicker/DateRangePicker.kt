@@ -42,48 +42,8 @@ import kotlinx.coroutines.launch
 @Composable
 fun DateRangePickerDefault() {
     ShowcasePreview(1300, 2000, hideDarkMode = true) {
-        val snackState = remember { SnackbarHostState() }
-        val snackScope = rememberCoroutineScope()
-        SnackbarHost(hostState = snackState, Modifier.zIndex(1f))
-
         val state = rememberDateRangePickerState()
-        Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 12.dp, end = 12.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                IconButton(onClick = {
-                    /* Do something! */
-                }
-                ) {
-                    Icon(
-                        imageVector = Icons.Filled.Close,
-                        contentDescription = "Close"
-                    )
-                }
-                TextButton(
-                    onClick = {
-                        snackScope.launch {
-                            snackState.showSnackbar(
-                                "Saved range (timestamps): " +
-                                        "${state.selectedStartDateMillis!!..state.selectedEndDateMillis!!}"
-                            )
-                        }
-                    },
-                    enabled = state.selectedEndDateMillis != null
-                ) {
-                    Text(text = "Save")
-                }
-            }
-
-            DateRangePicker(
-                modifier = Modifier.weight(1f),
-                state = state
-            )
-        }
+        DateRangePicker(state = state)
     }
 }
 
