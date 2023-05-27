@@ -73,7 +73,7 @@ fun BasicDialogDefault() {
     heightDp = 2000
 )
 @Composable
-fun DatePickerInputCustom() {
+fun BasicDialogCustom() {
     ShowcasePreview(1200, 2000, hideDarkMode = true) {
         val openDialog = remember { mutableStateOf(true) }
 
