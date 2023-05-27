@@ -24,7 +24,7 @@ import com.ivyapps.material3showcase.component.showkaseWidth
     heightDp = showkaseHeight,
 )
 @Composable
-fun LinearProgressIndicatorDefault() {
+fun LinearIndeterminateProgressIndicatorDefault() {
     ShowcasePreview {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             LinearProgressIndicator(
@@ -44,7 +44,7 @@ fun LinearProgressIndicatorDefault() {
     heightDp = showkaseHeight,
 )
 @Composable
-fun LinearProgressIndicatorCustom() {
+fun LinearIndeterminateProgressIndicatorCustom() {
     ShowcasePreview {
         Column(
             modifier = Modifier,
@@ -54,8 +54,8 @@ fun LinearProgressIndicatorCustom() {
                 modifier = Modifier
                     .semantics(mergeDescendants = true) {}
                     .padding(10.dp),
-                color = MaterialTheme.colorScheme.primary,
-                trackColor = MaterialTheme.colorScheme.onPrimary,
+                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                trackColor = MaterialTheme.colorScheme.primaryContainer,
                 strokeCap = ProgressIndicatorDefaults.LinearStrokeCap
             )
         }
