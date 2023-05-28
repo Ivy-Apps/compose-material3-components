@@ -99,7 +99,7 @@ fun SnackbarCustom() {
         Scaffold(
             snackbarHost = {
                 // reuse default SnackbarHost to have default animation and timing handling
-                SnackbarHost(snackbarHostState) { data ->
+                SnackbarHost(hostState = snackbarHostState) { data ->
                     // custom snackbar with the custom action button color and border
                     val isError = (data.visuals as? SnackbarVisualsWithError)?.isError ?: false
                     val buttonColor = if (isError) {
