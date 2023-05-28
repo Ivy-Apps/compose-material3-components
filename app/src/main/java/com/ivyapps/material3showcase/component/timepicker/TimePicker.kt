@@ -41,7 +41,10 @@ fun TimePickerDefault() {
             Button(
                 modifier = Modifier.align(Alignment.Center),
                 onClick = { showTimePicker = true }
-            ) { Text("Set Time") }
+            ) {
+                Text("Set Time")
+            }
+
             SnackbarHost(hostState = snackState)
         }
 
@@ -70,7 +73,10 @@ fun TimePickerCustom() {
             Button(
                 modifier = Modifier.align(Alignment.Center),
                 onClick = { showTimePicker = true }
-            ) { Text("Set Time") }
+            ) {
+                Text("Set Time")
+            }
+
             SnackbarHost(hostState = snackState)
         }
 
