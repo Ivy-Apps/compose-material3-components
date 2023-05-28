@@ -1,12 +1,7 @@
 package com.ivyapps.material3showcase.component.animations
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.expandVertically
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.shrinkVertically
+import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -29,16 +24,19 @@ fun AnimationsContent() {
             Switch(checked = visible, onCheckedChange = { visible = !visible })
         }
         item {
-            AnimatedVisibility(
-                modifier = Modifier,
-                visible = visible,
-                enter = fadeIn() + expandVertically(),
-                exit = fadeOut() + shrinkVertically(),
-            ) {
-                Content(
-                    text = "Content",
-                    color =  Color.Green,
-                )
+            Crossfade(
+                targetState = visible,
+                label = "crossfade content"
+            ) { state ->
+                when (state) {
+                    true -> {
+                        Content(text = "Text B", color = Color.Green)
+                    }
+
+                    else -> {
+                        Content(text = "Text A", color = Color.Red)
+                    }
+                }
             }
         }
     }

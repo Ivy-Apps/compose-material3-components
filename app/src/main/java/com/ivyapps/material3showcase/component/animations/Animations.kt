@@ -33,13 +33,13 @@ fun Anim1() {
 
 @Composable
 fun Anim2() {
-    var currentState by remember { mutableStateOf("a") }
+    var visible by remember { mutableStateOf(false) }
     Crossfade(
-        targetState = currentState,
+        targetState = visible,
         label = "crossfade content"
     ) { state ->
         when (state) {
-            "a" -> {
+            true -> {
 
             }
 
