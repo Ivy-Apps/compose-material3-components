@@ -20,7 +20,7 @@ import com.ivyapps.material3showcase.component.showkaseWidth
     name = "Default",
     group = "Elevated Button",
     widthDp = showkaseWidth,
-    heightDp = showkaseHeight,
+    heightDp = showkaseHeight
 )
 @Composable
 fun ElevatedButtonDefault() {
@@ -40,7 +40,7 @@ fun ElevatedButtonDefault() {
     name = "Custom",
     group = "Elevated Button",
     widthDp = showkaseWidth,
-    heightDp = showkaseHeight,
+    heightDp = showkaseHeight
 )
 @Composable
 fun ElevatedButtonCustom() {
