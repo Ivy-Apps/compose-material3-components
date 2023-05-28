@@ -7,13 +7,13 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -27,19 +27,19 @@ import com.ivyapps.material3showcase.component.ShowcasePreview
 @ComponentPreview
 @ShowkaseComposable(
     name = "Default",
-    group = "Center Aligned Top App Bar",
+    group = "Top App Bar",
     widthDp = 1200,
     heightDp = 2000
 )
 @Composable
-fun CenterAlignedTopAppBarDefault() {
+fun TopAppBarDefault() {
     ShowcasePreview(width = 1200, height = 2000, hideDarkMode = true) {
         Scaffold(
             topBar = {
-                CenterAlignedTopAppBar(
+                TopAppBar(
                     title = {
                         Text(
-                            text = "Centered TopAppBar",
+                            "Simple TopAppBar",
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -48,7 +48,7 @@ fun CenterAlignedTopAppBarDefault() {
                         IconButton(onClick = { /* doSomething() */ }) {
                             Icon(
                                 imageVector = Icons.Filled.Menu,
-                                contentDescription = "Menu"
+                                contentDescription = "Localized description"
                             )
                         }
                     },
@@ -56,7 +56,7 @@ fun CenterAlignedTopAppBarDefault() {
                         IconButton(onClick = { /* doSomething() */ }) {
                             Icon(
                                 imageVector = Icons.Filled.Favorite,
-                                contentDescription = "Favorite"
+                                contentDescription = "Localized description"
                             )
                         }
                     }
@@ -88,21 +88,21 @@ fun CenterAlignedTopAppBarDefault() {
 @ComponentPreview
 @ShowkaseComposable(
     name = "Custom",
-    group = "Center Aligned Top App Bar",
+    group = "Top App Bar",
     widthDp = 1200,
     heightDp = 2000
 )
 @Composable
-fun CenterAlignedTopAppBarCustom() {
+fun TopAppBarCustom() {
     ShowcasePreview(width = 1200, height = 2000, hideDarkMode = true) {
         Scaffold(
             modifier = Modifier,
             topBar = {
-                CenterAlignedTopAppBar(
+                TopAppBar(
                     modifier = Modifier,
                     title = {
                         Text(
-                            text = "Centered TopAppBar",
+                            "Simple TopAppBar",
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -111,7 +111,7 @@ fun CenterAlignedTopAppBarCustom() {
                         IconButton(onClick = { /* doSomething() */ }) {
                             Icon(
                                 imageVector = Icons.Filled.Menu,
-                                contentDescription = "Menu"
+                                contentDescription = "Localized description"
                             )
                         }
                     },
@@ -119,15 +119,19 @@ fun CenterAlignedTopAppBarCustom() {
                         IconButton(onClick = { /* doSomething() */ }) {
                             Icon(
                                 imageVector = Icons.Filled.Favorite,
-                                contentDescription = "Favorite"
+                                contentDescription = "Localized description"
                             )
                         }
                     },
-                    colors = TopAppBarDefaults.centerAlignedTopAppBarColors()
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.primaryContainer,
+                        scrolledContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                        navigationIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                        titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                        actionIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
                 )
             },
-            containerColor = MaterialTheme.colorScheme.primary,
-            contentColor = MaterialTheme.colorScheme.onPrimary,
             content = { innerPadding ->
                 LazyColumn(
                     contentPadding = innerPadding,
